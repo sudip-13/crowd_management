@@ -6,25 +6,12 @@ c2=50
 c3=100
 c4=900
 def notifier(l,r):
-    # toast = ToastNotifier()
-    # name=input("Enter your name")
     s=f"{l} side is overcrowded please,move towards {r} to avoid disturbance"
-    # toast.show_toast(
-    #     "Over_Crowding",
-    #     f"{s}",
-    #     duration = 60,
-    #     icon_path = "https://www.istockphoto.com/illustrations/water-icon",
-    #     threaded = True,
-    # ) 
-    # speaker = pyttsx3.init()
-    # speaker.say(f"{s}")
-    # speaker.runAndWait()
-    # s=f"Weapon detected in platform"
     notification = Notify()
     notification.title = "Over_Crowded"
     notification.message = f"{s}"
     notification.urgency = "critical"
-    notification.icon = "D:\PYTHON_GPU\crowd_management_using_webcam\images.jpeg"
+    notification.icon = "D:\\PYTHON_GPU\\crowd_management\\images.jpeg"
     notification.timeout = 100000
     notification.send()
     toast = ToastNotifier()
